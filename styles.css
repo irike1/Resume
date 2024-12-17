@@ -128,19 +128,56 @@ body {
   @media (max-width: 768px) {
     .container {
       flex-direction: column; /* Stack the sidebar and main content vertically */
-      transform: scale(.8); /* Remove scaling on small screens to fit content */
+      transform: scale(1); /* Remove scaling for smaller screens */
+      padding: 10px; /* Add padding around the entire container */
+      box-sizing: border-box;
     }
   
     .sidebar {
       width: 100%; /* Sidebar takes full width */
+      padding: 15px; /* Add some padding for better spacing */
+      box-sizing: border-box;
       text-align: center; /* Center-align sidebar content */
     }
   
+    .sidebar-top {
+      padding: 10px; /* Reduce padding in the top section */
+      background: #f9cbc1; /* Slightly darker pastel red for better contrast */
+    }
+  
     .sidebar-top p {
-      justify-content: center; /* Center-align text and icons inside sidebar */
+      justify-content: center; /* Center-align text and icons */
+      font-size: 0.9em; /* Reduce font size slightly */
+      margin: 5px 0; /* Reduce spacing between lines */
+    }
+  
+    .sidebar-bottom {
+      padding: 10px; /* Reduce padding in the bottom section */
+      background: #f1f1f1; /* Lighter background for readability */
     }
   
     main {
-      padding: 20px; /* Reduce padding for better fit */
+      width: 100%; /* Main content takes full width */
+      padding: 15px; /* Reduce padding for better fit */
+      box-sizing: border-box;
+    }
+  
+    .section {
+      margin-bottom: 20px; /* Reduce spacing between sections */
+    }
+  
+    .section h2 {
+      font-size: 1.2em; /* Reduce heading font size */
+      padding-bottom: 3px; /* Adjust padding for tighter layout */
+    }
+  
+    article p,
+    ul li {
+      font-size: 0.9em; /* Adjust font size for paragraphs and list items */
+    }
+  
+    ul {
+      padding-left: 15px; /* Reduce padding to fit content */
     }
   }
+  
