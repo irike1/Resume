@@ -125,3 +125,22 @@ body {
     line-height: 1.4em;
   }
   
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack the sidebar and main content vertically */
+      transform: scale(1); /* Remove scaling on small screens to fit content */
+    }
+  
+    .sidebar {
+      width: 100%; /* Sidebar takes full width */
+      text-align: center; /* Center-align sidebar content */
+    }
+  
+    .sidebar-top p {
+      justify-content: center; /* Center-align text and icons inside sidebar */
+    }
+  
+    main {
+      padding: 20px; /* Reduce padding for better fit */
+    }
+  }
