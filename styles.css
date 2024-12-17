@@ -128,7 +128,7 @@ body {
   @media (max-width: 768px) {
     .container {
       flex-direction: column; /* Stack the sidebar and main content vertically */
-      transform: scale(1); /* Remove scaling on small screens to fit content */
+      transform: scale(.8); /* Remove scaling on small screens to fit content */
     }
   
     .sidebar {
