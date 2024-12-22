@@ -2,162 +2,247 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
+
+  /* Centers the container horizontally + vertically 
+     If you prefer the container at the top, change 
+     align-items: center; to align-items: flex-start;
+  */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: none; /* Remove the light gray background color */
-  box-shadow: none; /* Remove the shadow */
 
+  background: none; /* Remove any background color */
+  box-shadow: none; /* Remove the shadow around the entire page */
 }
-  
+
+.container {
+  display: flex;
+  max-width: 900px; 
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  background: #fff;
+  transform: scale(1.0);
+  transform-origin: top center;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-top {
+  background: #F9CBCB;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar-top h1 {
+  margin: 10px 0;
+  font-size: 1.6em;
+}
+
+.sidebar-top p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+.sidebar-top a,
+main a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.sidebar-top a:hover,
+main a:hover {
+  color: #c23232;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover; 
+  object-position: center 30%;
+  margin-bottom: 10px;
+}
+
+.sidebar-bottom {
+  background: #F7F7F7; 
+  padding: 20px;
+  color: #333;
+}
+
+.sidebar-bottom p {
+  font-size: 0.95em;
+  line-height: 1.4em;
+  margin: 0;
+}
+
+.sidebar-bottom h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #c23232;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+article h3 {
+  font-size: 1.2em;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  color: #c23232;
+}
+
+article p {
+  margin: 0 0 10px 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  line-height: 1.4em;
+}
+
+/* Responsive: Adjust layout for smaller screens */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    max-width: 900px; 
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    background: #fff;
-    transform: scale(1.0);
-    transform-origin: top center;
-  }
-  
-  .sidebar {
-    width: 270px;
-    display: flex;
     flex-direction: column;
+    transform: scale(1);
+    padding: 0 10px; 
   }
-  
-  .sidebar-top {
-    background: #F9CBCB;
-    color: #333;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .sidebar-top h1 {
-    margin: 10px 0;
-    font-size: 1.6em;
-  }
-  
-  .sidebar-top p {
-    margin: 5px 0;
-    font-size: 0.95em;
-  }
-  
-  .sidebar-top a,
-  main a {
-    text-decoration: underline;
-    color: inherit;
-  }
-  
-  .sidebar-top a:hover,
-  main a:hover {
-    color: #c23232;
-  }
-  
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover; 
-    object-position: center 30%;
-    margin-bottom: 10px;
-  }
-  
-  .sidebar-bottom {
-    background: #F7F7F7; 
-    padding: 20px;
-    color: #333;
-  }
-  
-  .sidebar-bottom p {
-    font-size: 0.95em;
-    line-height: 1.4em;
-    margin: 0;
-  }
-  
+
   main {
-    flex: 1;
-    padding: 40px;
-    box-sizing: border-box;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
   }
-  
+
+  .sidebar {
+    width: 100%; 
+    padding: 15px;
+  }
+
   .section {
-    margin-bottom: 40px;
-  }
-  
-  .section h2 {
-    font-size: 1.5em;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
+  }
+
+  .section h2 {
+    font-size: 1.2em;
     padding-bottom: 5px;
   }
-  
-  article h3 {
-    font-size: 1.2em;
-    margin: 0 0 5px 0;
-    font-weight: bold;
-    color: #c23232;
-  }
-  
-  .sidebar-bottom h2 {
-    margin-top: 0;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #c23232;
-  }
-  
-  article p {
-    margin: 0 0 10px 0;
-    font-size: 0.95em;
-    color: #555;
-  }
-  
-  ul {
-    margin: 0;
-    padding: 0 0 0 20px;
-  }
-  
+
+  article p,
   ul li {
-    margin-bottom: 8px;
-    line-height: 1.4em;
+    font-size: 0.9em;
+    word-wrap: break-word;
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column; /* Stack sidebar and main vertically */
-      transform: scale(1); /* Remove scaling for better fit */
-      padding: 0 10px; /* Add space around the container */
-    }
-  
-    main {
-      width: 90%; /* Slim down the main body to 90% of the screen width */
-      max-width: 600px; /* Ensure it doesn't exceed a reasonable width */
-      margin: 0 auto; /* Center the main body */
-      padding: 20px; /* Adjust padding for readability */
-    }
-  
-    .sidebar {
-      width: 100%; /* Sidebar takes full width */
-      padding: 15px; /* Add consistent padding inside the sidebar */
-    }
-  
-    .section {
-      margin-bottom: 20px; /* Reduce space between sections */
-    }
-  
-    .section h2 {
-      font-size: 1.2em; /* Slightly smaller headings for mobile */
-      padding-bottom: 5px;
-    }
-  
-    article p,
-    ul li {
-      font-size: 0.9em; /* Slightly smaller text to fit smaller screens */
-      word-wrap: break-word; /* Prevent long words from breaking layout */
-    }
+}
+
+/* Dark Footer (Not Sticky) */
+.dark-footer {
+  /* Removed position: fixed and bottom: 0 so it's not sticky. */
+  background-color: #333;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 15px;
+
+  /* A little space between main content and footer */
+  margin-top: 20px;
+}
+
+.dark-footer .print-button {
+  background-color: #555;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.dark-footer .print-button:hover {
+  background-color: #777;
+}
+
+.dark-footer .footer-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dark-footer .footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 20mm; 
   }
-  
-  
+
+  body {
+    margin: 0;
+    background: none;
+    display: block;
+    /* Remove any min-height or padding if needed for print */
+  }
+
+  .container {
+    width: auto !important;
+    box-shadow: none;
+    transform: none !important;
+    transform-origin: initial !important;
+    margin: 0 auto;
+  }
+
+  .section {
+    page-break-inside: auto; 
+    break-inside: auto;
+  }
+
+  .sidebar {
+    width: 270px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  /* Footer in print (just normal flow) */
+  .dark-footer {
+    background-color: transparent;
+    color: #000;
+    margin-top: 20px;
+  }
+}
