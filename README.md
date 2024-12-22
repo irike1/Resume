@@ -1,6 +1,6 @@
 # Personal Resume Site
 
-This repository hosts the source code for my personal resume site, served via [GitHub Pages](https://<your-username>.github.io).
+This repository hosts the source code for my personal resume site, served via GitHub Pages.
 
 ## Overview
 
@@ -10,5 +10,6 @@ This repository hosts the source code for my personal resume site, served via [G
 
 ## How to View
 
-Visit the following URL to view the site:
+Visit the following URL to view the site: [https://irike1.github.io/Resume/]([https://<your-username>.github.io](https://irike1.github.io/Resume/)).
+
 
